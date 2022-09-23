@@ -1,0 +1,106 @@
+
+/*
+function listarArray(){
+    principal.innerHTML = '';
+    for(grupo of album.grupo){
+   
+        
+        principal.innerHTML += `<div class="conteinerGrupo" id="grupo${grupo.nomeGrupo}">
+        <div class="grupo">
+        <p>Grupo ${grupo.nomeGrupo}</p>
+        </div>
+        </div>`
+    
+        for(selecao of grupo.selecoes){
+            var grupoConteiner = document.getElementById(`grupo${grupo.nomeGrupo}`);
+                grupoConteiner.innerHTML += `<div class="conteinerSelecao" id="${selecao.nomeSelecao}">
+                <p class="nomeSelecaoP">${selecao.nomeSelecao}</p>
+                <div class="conteinerFigurinhas" id="figurinhas${selecao.nomeSelecao}"></div>
+                </div>`
+                
+    
+            for(figurinha of selecao.figurinha){
+                
+                var figurinhas = document.getElementById(`figurinhas${selecao.nomeSelecao}`);
+    
+                
+    
+            
+                figurinhas.innerHTML += `<div class="${figurinha.pele ? "figurinha epele": "figurinha"} ${figurinha.quantidade > 0 ? "tem" : "naotem"}">
+                <p>${figurinha.nomeFigurinha}</p>
+                <p>${figurinha.quantidade}</p>
+    
+                <div id="addOuDeleta" class="addOuDeletaConteiner">
+                <button id="adicionar" class="adiciona" onclick="adicionar('${figurinha.nomeFigurinha}')">+</button>
+                <button id="deleta" class="deleta" onclick="remover('${figurinha.nomeFigurinha}')">-</button>
+                </div>
+    
+                </div>`
+               
+                
+                
+                
+    
+            }
+        }
+    
+    }
+    
+}
+
+listarArray()
+
+
+function adicionar(nomeFigurinha){
+
+    for(grupo of album.grupo){
+
+        for(selecao of grupo.selecoes){
+            
+            for(figurinha of selecao.figurinha){
+                   if(figurinha.nomeFigurinha == nomeFigurinha){
+                    
+                    figurinha.quantidade += 1
+                    listarArray()
+                }
+            }
+        }
+    }
+
+}
+
+
+function remover(nomeFigurinha){
+
+    for(grupo of album.grupo){
+
+        for(selecao of grupo.selecoes){
+
+            for(figurinha of selecao.figurinha){
+                if(figurinha.quantidade > 0 && figurinha.nomeFigurinha == nomeFigurinha){
+                    
+                    figurinha.quantidade -= 1
+                    listarArray()
+                    
+                }        
+            }
+        }
+    }
+
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

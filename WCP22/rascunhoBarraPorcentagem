@@ -1,0 +1,24 @@
+if(((album.quantidadeTotal*100)/670).toFixed(2) >= 2.39){
+                document.getElementById('porcentagem').innerText = `${((album.quantidadeTotal*100)/670).toFixed(2)}%`
+                document.getElementById('barraPorcentagem').style.width = `${((album.quantidadeTotal*100)/670).toFixed(2)}%`
+            }
+
+
+            function montaPorcentagem(){
+                const Porcentagem = document.createElement('p')
+                Porcentagem.innerText='0%'
+                Porcentagem.id = 'porcentagem'
+                Porcentagem.classList.add('textoPorcentagem')
+            
+                const barraPorcentagem = document.createElement('div')
+                barraPorcentagem.classList.add('barraPorcentagem')
+                barraPorcentagem.id = 'barraPorcentagem'
+                barraPorcentagem.style.width ='0%'
+                barraPorcentagem.appendChild(Porcentagem)
+            
+            
+                const estatisticasContainer = document.createElement('div')
+                estatisticasContainer.appendChild(barraPorcentagem)
+                body.appendChild(estatisticasContainer)
+            }
+            
