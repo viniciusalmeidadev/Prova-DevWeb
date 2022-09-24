@@ -22,6 +22,18 @@
         height: 30px;
         width: 405px;   
     }
+
+    .abasDoMenuContainer{
+        flex-direction: column;
+    }
+
+    .cabecalhoContainer{
+        height: 160px;
+    }
+
+    .logo{
+        content: "MdS";
+    }
 }
 
 @media(max-width: 426px){
