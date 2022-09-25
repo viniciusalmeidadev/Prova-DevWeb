@@ -11,7 +11,7 @@
         width: 748px;   
     }
 }
-@media(max-width: 768px){
+@media(max-width: 900px){
     .conteinerFigurinhas{
         display: grid;
         grid-template-columns: repeat(3, 100px);
@@ -70,6 +70,17 @@
     .grupo{
         height: 30px;
         width: 300px;   
+    }
+
+    .containerEstatisticas{
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        gap: 30px 10px;
+    }
+
+    .tabelaCompletados{ 
+        width: 310px;
+        margin-bottom: 20px;
     }
 }
 
