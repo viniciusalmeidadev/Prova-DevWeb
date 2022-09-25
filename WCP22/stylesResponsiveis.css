@@ -40,6 +40,17 @@
         display: none;
     }
     
+    .containerEstatisticas{
+        display: grid;
+        grid-template-columns: repeat(2, 150px);
+        gap: 30px 10px;
+    }
+
+    .tabelaCompletados{ 
+        width: 310px;
+        margin-bottom: 20px;
+    }
+
     .logoMobile{
         display: block;
     }
@@ -67,6 +78,17 @@
         display: grid;
         grid-template-columns: repeat(1, 100px);
         
+    }
+
+    .containerEstatisticas{
+        display: grid;
+        grid-template-columns: repeat(1, 150px);
+        gap: 30px 10px;
+    }
+
+    .tabelaCompletados{ 
+        width: 150px;
+        margin-bottom: 20px;
     }
 
     .conteinerFigurinhasLegend{
