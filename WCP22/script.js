@@ -1,6 +1,6 @@
 var temaAtual = 1
 
-const abasDoMenu = ['figurinhas', 'legends', 'estatisticas']
+const abasDoMenu = ['figurinhas', 'legends', 'estatísticas']
 
 const body = document.getElementsByTagName("body")[0]
 
@@ -102,13 +102,23 @@ principalContainer.classList.add('principalContainer')
     
 function montaHeader(){
     const cabecalhoContainer = document.createElement('div')
-    cabecalhoContainer.classList.add('cabecalhoContainerLight')
+    cabecalhoContainer.classList.add('cabecalhoContainerLight', 'cabecalhoContainer')
     cabecalhoContainer.id = 'cabecalhoContainer'
+
+    const textoLogo = document.createElement('span')
+    textoLogo.innerText = 'Marcador de Sticker'
+    textoLogo.classList.add('logoDesktop')
+
+    const textoLogoReduzido = document.createElement('span')
+    textoLogoReduzido.innerText = 'MdS'
+    textoLogoReduzido.classList.add('logoMobile')
     
     const logo = document.createElement('h3')
-    logo.innerText = 'Marcador de Sticker'
     logo.classList.add('textoLogoLight')
     logo.id = 'logo'
+    logo.appendChild(textoLogo)
+    logo.appendChild(textoLogoReduzido)
+
     
     const abasDoMenuContainer = document.createElement('ul')
     abasDoMenuContainer.classList.add('abasDoMenuContainer')
@@ -332,6 +342,12 @@ function montaEstatisticas(){
 
     /*Seção de criação do card album completo*/
 
+    const tituloSuasEstatisticas = document.createElement('p')
+    tituloSuasEstatisticas.innerText = "Estatísticas sobre seu álbum:"
+    tituloSuasEstatisticas.classList.add('tituloSuasEstatisticas','texto',`${temaAtual == 1 ? "colorLight" : "colorDark"}`)
+
+    alinhaContainerEstatisticas.appendChild(tituloSuasEstatisticas)
+
     const containerBandeiraDireita = document.createElement('div')
     containerBandeiraDireita.classList.add('metadeBandeiraContainer')
     containerBandeiraDireita.style.backgroundColor = album.corDireita
@@ -382,9 +398,8 @@ function montaEstatisticas(){
 
     /*Seção de criação do card album legends*/
 
-    const containerGIFLegends = document.createElement('div')
-    containerGIFLegends.classList.add('metadeBandeiraContainer')
-    containerGIFLegends.style.backgroundColor = album.corEsquerda
+    const containerGIFLegends = document.createElement('img')
+    containerGIFLegends.setAttribute('src', legends.gif)
 
     const containerLegends = document.createElement('div')
     containerLegends.classList.add('containerBandeira')
@@ -478,8 +493,15 @@ function montaEstatisticas(){
         } 
     }
 
-    
-    
+    const tituloCompletados = document.createElement('p')
+    tituloCompletados.innerText = "Pessoas que já completaram o álbum:"
+    tituloCompletados.classList.add('tituloCompletados', 'texto',`${temaAtual == 1 ? "colorLight" : "colorDark"}`)
+
+    alinhaContainerEstatisticas.appendChild(tituloCompletados)
+    alinhaContainerEstatisticas.appendChild(tabela)
+    tabela.classList.add('texto',`${temaAtual == 1 ? "colorLight" : "colorDark"}`)
+
+   
 }
 
 
@@ -494,7 +516,7 @@ function trocaHTML(paginaEscolhida){
     }else if(paginaEscolhida == "legends"){
         montaLegends()
         
-    }else if(paginaEscolhida == "estatisticas"){
+    }else if(paginaEscolhida == "estatísticas"){
         montaEstatisticas()
     }else{
         console.log('nao entrou')
@@ -514,6 +536,20 @@ function montaDomInicial(){
 }
 
 montaDomInicial()
+
+const botaoParaTopo = document.createElement('img')
+botaoParaTopo.setAttribute('onclick', 'voltarParaTopo()')
+botaoParaTopo.setAttribute('id', 'botaoParaTopo')
+botaoParaTopo.setAttribute('src', './assets/botaoParaTopoLight.png')
+botaoParaTopo.classList.add('botaoParaTopo')
+
+body.appendChild(botaoParaTopo)
+
+function voltarParaTopo(){
+
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 
 
 

@@ -8,6 +8,7 @@ cabecalhoContainer.appendChild(botaoTrocaTema)
 const TrocaTemalogo = document.getElementById('logo')
 const trocaTemaAbasMenu = document.querySelectorAll('.abaDoMenu')
 const trocaTemaContainerPrincipal = document.querySelector('.principalContainer')
+const trocaTemaBotaoParaTopo = document.querySelector('#botaoParaTopo')
 
 
 
@@ -38,7 +39,7 @@ function trocaTema() {
         trocaTemaCardSelecao.forEach(e => e.classList.add('cardSelecaoDark'))
 
         trocaTemaContainerPrincipal.style.backgroundColor = "#121619"
-
+        trocaTemaBotaoParaTopo.setAttribute('src', './assets/botaoParaTopoDark.png') 
         botaoTrocaTema.setAttribute('src', './assets/trocaParaLight.png')
         temaAtual -= 1
         console.log(temaAtual)
@@ -66,6 +67,7 @@ function trocaTema() {
         trocaTemaContainerPrincipal.style.backgroundColor = "#fff"
 
         botaoTrocaTema.setAttribute('src', './assets/trocaParaDark.png')
+        trocaTemaBotaoParaTopo.setAttribute('src', './assets/botaoParaTopoLight.png') 
         temaAtual += 1
         console.log(temaAtual)
     }

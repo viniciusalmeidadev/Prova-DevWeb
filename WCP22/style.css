@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
@@ -6,6 +7,8 @@
     text-rendering: optimizeLegibility !important;
     text-decoration: none;
 }
+
+
 .conteinerGrupo{
     display: flex;
     flex-direction: column;
@@ -268,6 +271,7 @@ margin: 15px 0px 15px 0px;
 
 .alinhaContainerEstatisticas{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -338,4 +342,42 @@ margin: 15px 0px 15px 0px;
 
 .logoMobile{
     display: none;
+}
+
+.tituloSuasEstatisticas{
+    margin: 20px 0px 20px 0px;
+    font-weight: bold;
+}
+
+.tituloCompletados{
+    margin: 80px 0px 20px 0px;
+    font-weight: bold;
+}
+
+.tabelaCompletados{ 
+    width: 640px;
+    margin-bottom: 20px;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+tr:nth-child(even) {
+    background-color: #c0c0c0;
+}
+
+
+.botaoParaTopo{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+}
+
+.botaoParaTopo:hover{
+    cursor: pointer;
 }

@@ -18,6 +18,11 @@
         gap:10px;
     }
 
+    .conteinerFigurinhasLegend{
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+    }
+
     .grupo{
         height: 30px;
         width: 405px;   
@@ -38,6 +43,11 @@
     .logoMobile{
         display: block;
     }
+
+    .abaDoMenu{
+        font-size: 10px;
+    }
+    
 }
 
 @media(max-width: 426px){
@@ -57,6 +67,11 @@
         display: grid;
         grid-template-columns: repeat(1, 100px);
         
+    }
+
+    .conteinerFigurinhasLegend{
+        display: grid;
+        grid-template-columns: repeat(1, 100px);
     }
 
     .grupo{

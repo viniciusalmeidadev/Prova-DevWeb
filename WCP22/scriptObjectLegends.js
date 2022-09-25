@@ -1,5 +1,6 @@
 const legends = {
     quantidadeLegendsTotal:0,
+    gif: './assets/gifLegends.gif',
     jogadores:[
         {
             nome: 'Neymar Jr.',
